@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color ="primary">
+    <ion-title >Ayoos Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    <form #form="ngForm">
+      <ion-grid padding>
+        <ion-row margin >
+          <ion-col>
+            <ion-item >
+              <!--Username Field-->
+                <ion-label position="floating">Username</ion-label>
+                <ion-input type="text" name="username" [(ngModel)]="username" required></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row margin>
+            <ion-col>
+              <ion-item >
+                <!--Password Field-->
+                  <ion-label position="floating">Password</ion-label>
+                  <ion-input type="password" name="password" [(ngModel)]="password" required></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row margin>
+            <ion-col>
+              <!--Login Button-->
+              <ion-button [disabled]="form.invalid" (click)="authenticate()" expand="block" >Login</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row >
+            <ion-col text-center>
+              <ion-text>
+                <span>
+                  <p>Don't have a Account ?</p>&nbsp; 
+                   <!--Register Link / Button-->
+                  <ion-button (click)="register()" >Register</ion-button>
+                </span>
+              </ion-text>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    </form>
+
+</ion-content>
+

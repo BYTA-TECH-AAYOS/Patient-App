@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+      <ion-title>Register</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-grid>
+  <ion-card>
+    <ion-card>
+      <ion-item >
+      <h3 slot = "start">Register Now</h3>
+      <ion-avatar slot = "end"><ion-img src="assets/user.png"></ion-img></ion-avatar>
+    </ion-item>
+    <!-- <ion-item>
+      <h6>Fill in the form to get instant access</h6>
+    </ion-item> -->
+    </ion-card>
+  <ion-grid padding>
+    <ion-row margin>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" >Enter a username</ion-label>
+          <ion-input [(ngModel)]="username"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+      <ion-row margin>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" >Enter your email</ion-label>
+          <ion-input [(ngModel)]="email"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+      <ion-row margin>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" >Enter password</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row margin>
+        <ion-col text-center>
+            <ion-button (click)="register()">Sign up</ion-button>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+  </ion-card>
+</ion-grid>

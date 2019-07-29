@@ -1,0 +1,7 @@
+{
+  "name": "AYOOS-APP-NEW",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

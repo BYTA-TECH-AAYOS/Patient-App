@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <!-- <ion-card> -->
+      <ion-buttons>
+    <ion-button slot="start" >
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-button>
+    <ion-searchbar margin-bottom slot="start"  placeholder="Search for your health ..." class="border-style" margin-top></ion-searchbar>
+
+    <ion-button color="light" slot="end" [routerLink]="['/','notifications']">
+        <ion-icon name="notifications" ></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <!-- </ion-card> -->
+    <!-- <app-popover [term]="searchTerm" class="hide-element" ></app-popover> -->
+    
+  </ion-toolbar >
+  <ion-segment scrollable (ionChange)="segmentChanged($event)">
+    <ion-segment-button value = "doctorsList">
+   <ion-icon name="contacts"></ion-icon>
+      <!-- <ion-label>Doctors</ion-label>   -->
+    </ion-segment-button>
+  <ion-segment-button value = "qualificationList" >
+    <ion-icon name="medkit"></ion-icon>
+    <!-- <ion-label>Specialities</ion-label> -->
+  </ion-segment-button>
+  <ion-segment-button value = "clinicList" >
+    <ion-icon name="business"></ion-icon> 
+    <!-- <ion-label>Clinic</ion-label> -->
+  </ion-segment-button>
+  <ion-segment-button value = "laboratories">
+    <ion-icon name="flask"></ion-icon>
+    <!-- <ion-label>Laboratories</ion-label> -->
+  </ion-segment-button>
+  <ion-segment-button value = "pharmacies" >
+    <ion-icon name="medical"></ion-icon>
+        <!-- <ion-label>Pharma</ion-label> -->
+  </ion-segment-button>
+</ion-segment>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="segment=='doctorsList'">
+    <app-doctors-list></app-doctors-list>
+  </div>
+</ion-content>
